@@ -37,8 +37,18 @@ public class SpiralMatrix {
 	 */
 	
 	public void ciklicnaMatrica() {
-		int prviBroj = PomocnaMetoda.ucitajBroj("Upisi x dimenzije:");
-		int drugiBroj = PomocnaMetoda.ucitajBroj("Upisi y dimenzije:");
+		
+		int prviBroj = 0;
+		int drugiBroj = 0;
+		JOptionPane.showMessageDialog(null, "Notice: input cannot be <1 or >10 ");
+		do {
+		 prviBroj = PomocnaMetoda.ucitajBroj("Upisi x dimenzije:");
+		 drugiBroj = PomocnaMetoda.ucitajBroj("Upisi y dimenzije:");
+		 
+		}while (prviBroj <1 || prviBroj > 10);
+		
+			
+		
 		
 	    int[][] spirala = new int[prviBroj][drugiBroj];
 	    
